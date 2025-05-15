@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 const HeaderLogo = () => {
   return (
-    <div>
-        <p className='w-10 text-6xl text-white pb-3' >Logo</p>
-    </div>
+    <Link href='/' className='flex gap-1 text-black '>
+      <FontAwesomeIcon icon={ faArrowRightArrowLeft} className=' w-6 -rotate-45 '/>
+      <p className='w-fit h-fit text-2xl  pb-3 italic'>TRADE.CONN</p>
+    </Link>
   )
 }
 
