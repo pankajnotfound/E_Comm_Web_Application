@@ -1,31 +1,29 @@
+'use client';
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import MenuElement from './MenuElement';
 
 const Navbar = () => {
+
+    const [serviceDDActive, setServiceDDActive] = useState(false);
+
+
   return (
     <div className='flex gap-8 tex-3xl'>
-        <Link href='/' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
+        <Link href='/' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             HOME
         </Link>
-        <Link href='/dashboard' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
+        <Link href='/dashboard' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             DASHBOARD
         </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
-            SERVICES
-        </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
-            VENODRS
-        </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
-            ORDER
-        </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
-            SUPPORT
-        </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
+        <MenuElement menuHeading = 'SERVICES' element1='Hi' element2='Hello' element3='Jai mata di' element4='Yoo' />
+        <MenuElement menuHeading = 'VENDORS' element1='Hi' element2='Hello' element3='Jai mata di' element4='Yoo' />
+        <MenuElement menuHeading = 'ORDER' element1='Hi' element2='Hello' element3='Jai mata di' element4='Yoofhsjdfktytrfbxdh' />
+        <MenuElement menuHeading = 'SUPPORT' element1='Hi' element2='Hello' element3='Jai mata di' element4='Yoo' />
+        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             CART
         </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out border-[var(--text_color)]/0 border-2 hover:border-[var(--text_color)]/100 hover:bg-[var(--secondary)]'>
+        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             ABOUT US
         </Link>
 

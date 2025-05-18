@@ -2,7 +2,8 @@
 
 :root{
   --primary : #784afe;
-  --secondary : #E2D8FF ;
+  --secondary : #E2D8FF;
+  --third : #375ba1;
   --text_color : #531984;
   --highlight : #784afe;
 }
