@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 type propsType = {
@@ -10,14 +11,14 @@ type propsType = {
 
 const MenuElement = (props : propsType) => {
   return (
-    <div>
-        <div className='z-50 p-2 relative rounded rounded-b-none group transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
+    <div >
+        <div className='z-50 p-2 relative rounded gap-2 group transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             {props.menuHeading}
-            <div className=' scale-y-0 min-w-full absolute top-10 left-0 flex-col gap-2 rounded rounded-t-none bg-[var(--secondary)] transition-all duration-300 ease-in-out origin-top group-hover:scale-y-100 '>
-                <p className='p-2 text-sm'>{props.element1}</p>
-                <p className='p-2 text-sm'>{props.element2}</p>
-                <p className='p-2 text-sm'>{props.element3}</p>
-                <p className='p-2 text-sm'>{props.element4}</p>
+            <div className=' scale-y-0 min-w-full absolute top-15 left-0 flex flex-col gap-2 text-nowrap rounded bg-[var(--text_color)] text-white font-semibold shadow-lg shadow-[#E2D8FF] transition-all duration-300 ease-in-out origin-top group-hover:scale-y-100 '>
+                <Link href='/' className='py-4 px-10 text-sm transition-all duration-300 ease-in-out hover:translate-x-1'>{props.element1}</Link>
+                <Link href='/' className='py-4 px-10 text-sm transition-all duration-300 ease-in-out hover:translate-x-1'>{props.element2}</Link>
+                <Link href='/' className='py-4 px-10 text-sm transition-all duration-300 ease-in-out hover:translate-x-1'>{props.element3}</Link>
+                <Link href='/' className='py-4 px-10 text-sm transition-all duration-300 ease-in-out hover:translate-x-1'>{props.element4}</Link>
             </div>
         </div>
     </div>

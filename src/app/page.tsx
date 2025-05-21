@@ -6,7 +6,7 @@ import Testimonials from '../../components/testimonials/Testimonials'
 
 const page = () => {
   return (
-    <div className='w-full h-auto bg-[var(--secondary)] overflow-hidden'>
+    <div className='w-full h-auto pt-20 bg-[var(--secondary)] overflow-hidden'>
       <Hero />
       <TrustedMain />
       <Features />
