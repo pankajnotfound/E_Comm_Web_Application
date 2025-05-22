@@ -79,7 +79,7 @@ const TestimonialSlider = () => {
                             <FontAwesomeIcon icon={faStar} className='text-[#784afe]' />
                         </div>
                         <p className='w-full px-5 text-2xl text-center font-bold sxl:px-25'>"Reliable B2B marketplace with serious buyers. We've expanded to international clients thanks to the visibility and logistics support built into the platform."</p>
-                        <SliderProfile image='/resources/slideravatar3.png' name='ARVIND KEJRIWAL' address='Kapoor Industrial Supplies' />
+                        <SliderProfile image='/resources/slideravatar3.png' name='ARVIND KEJRIWAL' address='Kejruddin Industrial Supplies' />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >

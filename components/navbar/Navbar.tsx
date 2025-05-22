@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             CART
         </Link>
-        <Link href='' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
+        <Link href='/aboutus' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             ABOUT US
         </Link>
 
