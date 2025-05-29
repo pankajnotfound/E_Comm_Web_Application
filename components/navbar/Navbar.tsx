@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link href='/dashboard' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             DASHBOARD
         </Link>
-        <Link href='/dashboard' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
+        <Link href='/products' className='p-2 rounded transition-all duration-300 ease-in-out hover:bg-[var(--secondary)]'>
             PRODUCTS
         </Link>
         <MenuElement menuHeading = 'VENDORS' element1='Browse Vendors' element2='Become a Vendor' element3='Top Rated Vendors' element4='Upload Product' path1='/' path2='/becomevendor' path3='/' path4='/uploadproduct' />

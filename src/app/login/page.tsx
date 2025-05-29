@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { useSession } from '../userSession/session';
+import { useRouter } from 'next/navigation';
 
 
 const page = () => {
+
+  const router = useRouter();
 
   const [formData, setFormData] = useState({
     email:'',
@@ -39,6 +42,7 @@ const page = () => {
       setUserId(loginResponse.userId);
       setLoggedIn(true);
       setUserName(loginResponse.userName);
+      router.push('/dashboard');
     }
   }
     
