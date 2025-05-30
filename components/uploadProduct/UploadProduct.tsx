@@ -9,7 +9,7 @@ const Uploadproduct = () => {
 
   const [ formData, setFormData] = useState({
     name :'',
-    image :'/abc',
+    image :'/resources/defaultProduct.png',
     description : '',
     price : '',
     quantity: '',
@@ -22,6 +22,27 @@ const Uploadproduct = () => {
   const fieldUpdate = (e:any) => {
     setFormData(prev => ({...prev, [e.target.name] : e.target.value }));
   }
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    const res = await fetch("/api/uploadimage", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      setFormData((prev) => ({ ...prev, image: data.filePath }));
+    } else {
+      console.error("Image upload failed:", data);
+    }
+  };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -38,7 +59,7 @@ const Uploadproduct = () => {
       setStatus(true)
       setFormData({
         name :'',
-        image :'/abc',
+        image :'',
         description : '',
         price : '',
         quantity: '',
@@ -70,7 +91,7 @@ const Uploadproduct = () => {
       <div className='w-fit min-w-[30vw] flex flex-col gap-5'>
         <p className='text-3xl font-bold'>UPLOAD YOUR PRODUCT</p>
         <input required onChange={fieldUpdate} type="text" name='name' value={formData.name} placeholder='Product Name' className='text-lg pl-4 outline-1 outline-black rounded focus:outline-[#d16ec6] ' />
-        <input onChange={fieldUpdate} type="file" name='image' placeholder='Upload' className='text-lg p-1 file:p-1 file:bg-[#d16ec6] file:text-white file:outline-1 outline-black file:rounded focus:file:outline-[#d16ec6] ' />
+        <input onChange={handleImageUpload} type="file" name='image' placeholder='Upload' className='text-lg p-1 file:p-1 file:bg-[#d16ec6] file:text-white file:outline-1 outline-black file:rounded focus:file:outline-[#d16ec6] ' />
         <textarea required onChange={fieldUpdate} name="description" value={formData.description} id="" placeholder='Product Description' className='min-h-10 max-h-40 overflow-auto text-lg pl-4 outline-1 outline-black rounded focus:outline-[#d16ec6]' ></textarea>
         <input required onChange={fieldUpdate} type="text" name='price' value={formData.price} placeholder='Price per product' className='text-lg pl-4 outline-1 outline-black rounded focus:outline-[#d16ec6] ' />
         <input required onChange={fieldUpdate} type="text" name='quantity' value={formData.quantity} placeholder='Quantity' className='text-lg pl-4 outline-1 outline-black rounded focus:outline-[#d16ec6] ' />
