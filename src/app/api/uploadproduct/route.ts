@@ -28,7 +28,7 @@ export async function POST(req : NextRequest) {
                 price: parseFloat(price),
                 quantity: parseInt(quantity),
                 category,
-                vendorId: parseInt(vendorId),
+                userId: parseInt(vendorId),
             },
         })
 

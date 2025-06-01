@@ -12,7 +12,11 @@ const Login = () => {
 
   const { loggedIn, setUserId, setLoggedIn, setUserName} = useSession();
 
-  const handleLogOut = () => {
+  const handleLogOut = async () => {
+    const login = await fetch('/api/logout', {
+        method: 'POST',
+        credentials: 'include', // ensures cookies are sent
+      })
     setLoggedIn(false);
     setUserId(0);
     setUserName('');
@@ -22,7 +26,7 @@ const Login = () => {
   return (
     <div >
       {loggedIn ? 
-        <div onClick={handleLogOut} className='w-25 h-10 border-1 px-2 py-1 rounded text-2xl text-center cursor-pointer hover:bg-[var(--text_color)] hover:text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
+        <div onClick={handleLogOut} className='w-25 h-10 border-1 px-2 py-1 rounded text-2xl place-self-center text-center cursor-pointer hover:bg-[var(--text_color)] hover:text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
           LogOut
         </div>
         :

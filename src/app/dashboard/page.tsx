@@ -15,7 +15,11 @@ const page = () => {
   const router = useRouter();
   const { userName, setLoggedIn, setUserId, setUserName } = useSession();
   
-  const handleLogOut = () => {
+  const handleLogOut = async () => {
+    const login = await fetch('/api/logout', {
+        method: 'POST',
+        credentials: 'include', // ensures cookies are sent
+      })
     setLoggedIn(false);
     setUserId(0);
     setUserName('');

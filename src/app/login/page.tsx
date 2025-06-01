@@ -39,9 +39,8 @@ const page = () => {
     }
 
     if(submitData.status == 200){
-      setUserId(loginResponse.userId);
-      setLoggedIn(true);
       setUserName(loginResponse.userName);
+      console.log('username is', loginResponse.userName)
       router.push('/dashboard');
     }
   }

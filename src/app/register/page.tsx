@@ -13,6 +13,7 @@ const page = () => {
       name :'',
       email: '',
       password :'',
+      role:'user',
     })
   
     const [status, setStatus] = useState(false);
@@ -44,16 +45,8 @@ const page = () => {
             name :'',
             email: '',
             password :'',
+            role: 'user'
           })
-      }
-      if(result.status == 201){
-        setStatus(true)
-        setFormData({
-          name :'',
-          email:'',
-          password:''
-        })
-        setConfirmPassowrd('')
       }
       
       console.log(result);
