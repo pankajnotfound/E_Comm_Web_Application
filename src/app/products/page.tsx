@@ -77,10 +77,10 @@ const page = () => {
     
   return (
     <div className=' w-full h-fit p-40 bg-[var(--secondary)] flex flex-col gap-10 justify-center items-center '>
-        <div className='w-full flex gap-4 justify-center items-center '>
+        {/* <div className='w-full flex gap-4 justify-center items-center '>
             <input type="text" placeholder='Search.....' className='w-[70%] h-full text-xl p-2 outline-1 rounded' />
             <button className='w-fit p-2 bg-[var(--primary)] rounded text-xl font-semibold px-4 transition-all duration-300 ease-in-out hover:bg-[var(--third)] hover:text-white '>GO</button>
-        </div>
+        </div> */}
         {loading ? 
         <div className='text-5xl font-black pt-20 text-[var(--primary)]'>
             Please Wait, Loading......

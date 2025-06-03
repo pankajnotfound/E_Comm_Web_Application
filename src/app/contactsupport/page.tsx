@@ -5,6 +5,7 @@ import { faAlignJustify } from '@fortawesome/free-solid-svg-icons/faAlignJustify
 import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons/faCircleQuestion'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
@@ -28,10 +29,10 @@ const page = () => {
                 </div>
                 <p className='text-lg'>Have Questions? We’ve Got Answers.</p>
                 <p className='max-w-80'>Browse our frequently asked questions to find quick solutions on topics like account setup, order tracking, payments, and more.</p>
-                <div className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
+                <Link href='/faq' className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
                     <FontAwesomeIcon icon={faArrowRight} className='!w-4 !h-4 place-self-center' />
                     <p>Explore Common Questions</p>
-                </div>
+                </Link>
             </div>
             <div className='w-fit flex flex-col gap-4 p-5 justify-center items-start text-start bg-[#ebbbe9] rounded-lg transition-all duration-300 ease-in-out hover:shadow-[0px_0px_10px_0.1px_black] '>
                 <div className='w-fit flex justify-center items-center gap-5'>
@@ -40,10 +41,10 @@ const page = () => {
                 </div>
                 <p className='text-lg'>Something Not Working Right?</p>
                 <p className='max-w-80'>Tell us what went wrong and we’ll look into it right away. Whether it's a technical glitch or a transaction concern, we’re here to help.</p>
-                <div className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
+                <Link href='/reportissue' className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
                     <FontAwesomeIcon icon={faArrowRight} className='!w-4 !h-4 place-self-center' />
                     <p>Submit an Issue Report</p>
-                </div>
+                </Link>
             </div>
             <div className='w-fit flex flex-col gap-4 p-5 justify-center items-start text-start bg-[#ebbbe9] rounded-lg transition-all duration-300 ease-in-out hover:shadow-[0px_0px_10px_0.1px_black] '>
                 <div className='w-fit flex justify-center items-center gap-5'>
@@ -52,10 +53,10 @@ const page = () => {
                 </div>
                 <p className='text-lg'>Real-Time Help, Coming Soon!</p>
                 <p className='max-w-80'>Soon you'll be able to chat directly with our support team for faster responses and real-time problem solving—right from this page.</p>
-                <div className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
+                <Link href='/livechat' className='w-fit flex gap-3 p-2 transition-all duration-300 ease-in-out hover:bg-[var(--forth)] hover:text-white rounded hover:translate-x-1'>
                     <FontAwesomeIcon icon={faArrowRight} className='!w-4 !h-4 place-self-center' />
                     <p>Stay tuned for live chat support</p>
-                </div>
+                </Link>
             </div>
         </div>
     </div>  

@@ -48,7 +48,7 @@ const steps = [
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-12 text-gray-800">
+    <div className="min-h-screen bg-gray-50 px-6 py-12 text-gray-800 pt-30">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-extrabold text-blue-800 text-center mb-16 hover:scale-105 transition-transform duration-300">
           How It Works
