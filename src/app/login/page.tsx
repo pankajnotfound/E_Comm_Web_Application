@@ -20,7 +20,7 @@ const page = () => {
     setFormData(prev => ({...prev, [e.target.name] : e.target.value }));
   }
 
-  const { setUserId, setLoggedIn, setUserName } = useSession();
+  const { setUserName } = useSession();
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();

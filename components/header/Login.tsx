@@ -26,8 +26,8 @@ const Login = () => {
   return (
     <div >
       {loggedIn ? 
-        <div onClick={handleLogOut} className='w-25 h-10 border-1 px-2 py-1 rounded text-2xl place-self-center text-center cursor-pointer hover:bg-[var(--text_color)] hover:text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
-          LogOut
+        <div onClick={handleLogOut} className='w-fit h-10 border-1 px-2 py-1 rounded text-2xl text-nowrap place-self-center text-center cursor-pointer hover:bg-[var(--text_color)] hover:text-white transition-all duration-300 ease-in-out hover:-translate-y-1'>
+          Log Out
         </div>
         :
         <div className='flex gap-2 text-black'>

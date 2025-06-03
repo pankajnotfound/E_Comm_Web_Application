@@ -72,7 +72,6 @@ const ProductPage = ({id}:productType) => {
 
     const handleOrder = async () => {
         if (err) return;
-
         const orderDetails = {
             productId: id,
             productName: data.name,
